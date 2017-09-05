@@ -8,12 +8,12 @@ var isMenuOpen = false;
     e.preventDefault();
       if(isMenuOpen)
           {
-            $("#menu-toggle-small").removeClass("active");
+            $("#menu-toggle-small").removeClass("active", 50);
             isMenuOpen = false;
           }
       else if(!isMenuOpen)
           {
-            $("#menu-toggle-small").addClass("active");
+            $("#menu-toggle-small").addClass("active", 50);
             isMenuOpen = true;  
           }
   });
@@ -27,8 +27,9 @@ var isMenuOpen = false;
           }
   });
     
-    $(".menu-child").click(function () {
-        $("#menu-toggle-small").removeClass("active");
+    $(".menu-child").click(function (e) {
+        e.preventDefault();
+        $("#menu-toggle-small").removeClass("active", 50);
         isMenuOpen = false;
     });
 })(jQuery); // End of use strict
